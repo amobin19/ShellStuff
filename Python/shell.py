@@ -3,21 +3,21 @@ import os
 
 while(True):
 	command = input("Command: ")
-	if(command == "exit"):
+	if(command == "exit"): # exit
 		break;
-	elif(command == "pwd"):
+	elif(command == "pwd"): # print working directory
 		print(os.getcwd())
-	elif(command == "ls"):
+	elif(command == "ls"): # list
 		print(os.listdir(os.getcwd()))
-	elif(command[0:2] == "cd"):
+	elif(command[0:2] == "cd"): # change directory
 		if(os.path.isdir(command[3:])):
 			os.chdir(command[3:])
-		elif(command[3:] == "--"):
+		elif(command[3:] == "--"): # change to root directory
 			os.chdir("/root/")
-		else:
+		else: # non existent directory
 			print("Error directory does not exist")
 	else:
-		if(os.system(command) != 0):
+		if(os.system(command) != 0): # invalid external argument
 			print("Error invalid argument")
-		else:
+		else: # execution of external argument
 			os.system(command)
