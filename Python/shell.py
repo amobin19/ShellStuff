@@ -17,4 +17,7 @@ while(True):
 		else:
 			print("Error directory does not exist")
 	else:
-		print("Error invalid input")
+		if(os.system(command) != 0):
+			print("Error invalid argument")
+		else:
+			os.system(command)

@@ -1,2 +1,2 @@
-text = "cd ~Desktop/Github/"
-print(text[3:])
+text = "cd not found"
+print(text[-9:])
