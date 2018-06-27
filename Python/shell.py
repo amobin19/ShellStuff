@@ -3,6 +3,8 @@ import os
 
 while(True):
 	command = input("Command: ")
+	
+	#INTERNAL
 	if(command == "exit"): # exit
 		break;
 	elif(command == "pwd"): # print working directory
@@ -16,7 +18,9 @@ while(True):
 			os.chdir("/root/")
 		else: # non existent directory
 			print("Error directory does not exist")
-	else:
+	
+	# EXTERNAL
+	else: 
 		if(os.system(command) != 0): # invalid external argument
 			print("Error invalid argument")
 		else: # execution of external argument

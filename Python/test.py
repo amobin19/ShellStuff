@@ -1,2 +1,2 @@
 text = "cd not found"
-print(text[-9:])
+print(text[0:2])
